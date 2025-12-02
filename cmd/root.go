@@ -1,18 +1,18 @@
 /*
 Copyright © 2025 NAME HERE <EMAIL ADDRESS>
-
 */
 package cmd
 
 import (
+	"fmt"
 	"os"
-	
+
 	"github.com/spf13/cobra"
 )
 
-
-
 // rootCmd represents the base command when called without any subcommands
+
+var version = "v0.1.0"
 var rootCmd = &cobra.Command{
 	Use:   "lazr",
 	Short: "recon helper for most used recon activites",
@@ -20,7 +20,10 @@ var rootCmd = &cobra.Command{
 	that you would need for cleaning and sorting for your day to day problems`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+	 Run: func(cmd *cobra.Command, args []string) {
+		printBanner()
+	  },
+	  Version: version,
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -42,6 +45,26 @@ func init() {
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+}
+
+
+const banner = ` _       ___   ____________ 
+| |     / _ \ |___  /| ___ \
+| |    / /_\ \   / / | |_/ /
+| |    |  _  |  / /  |    / 
+| |____| | | |./ /___| |\ \ 
+\_____/\_| |_/\_____/\_| \_|
+                            
+                            `
+
+func printBanner() {
+	fmt.Println(banner)
+	fmt.Printf("Version: %s\n", "1.0.0")
+	fmt.Printf("Author: Arnav Mahajan\n")
+	fmt.Println("You are welcome to contribute. Do Star repo if you like the it")	
+	fmt.Println()
+
+	fmt.Println("Check out lazr -h or --help to get started :)")
 }
 
 
