@@ -17,7 +17,7 @@ var rootCmd = &cobra.Command{
 	Use:   "lazr",
 	Short: "recon helper for most used recon activites",
 	Long: `Lazr is a tool made make your recon journey simpler. It has all the small helper functions
-	that you would need for cleaning and sorting for your day to day problems`,
+	that you would need for cleaning and sorting for your day to day recon activites`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	 Run: func(cmd *cobra.Command, args []string) {
@@ -59,12 +59,12 @@ const banner = ` _       ___   ____________
 
 func printBanner() {
 	fmt.Println(banner)
-	fmt.Printf("Version: %s\n", "1.0.0")
+	fmt.Printf("Version: %s\n", "0.1.0")
 	fmt.Printf("Author: Arnav Mahajan\n")
 	fmt.Println("You are welcome to contribute. Do Star repo if you like the it")	
 	fmt.Println()
 
-	fmt.Println("Check out lazr -h or --help to get started :)")
+	fmt.Println("Check out -h | --help to get started :)")
 }
 
 
